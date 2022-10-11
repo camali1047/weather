@@ -9,7 +9,6 @@ function App(){
   
  
   async function search(e){
-  
     if(e.code==="Enter"){
       const input=_.capitalize(e.target.value);
       await axios.get('https://api.openweathermap.org/data/2.5/weather',{params:{q:input,appid:"4ad5eeea1a5b31382a642d4760a566fb"}})
@@ -18,7 +17,7 @@ function App(){
         setWeather(response.data);
         setCity("");
         
-        
+         
       })
       .catch(function (error) {
         console.log(error);
